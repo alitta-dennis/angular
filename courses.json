@@ -1,0 +1,51 @@
+{
+  "signupUsersList": [
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "email": "karen@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "email": "vivek@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "email": "sam@gmail.com",
+      "password": "0987",
+      "id": 4
+    },
+    {
+      "email": "harry@gmail.com",
+      "password": "0987",
+      "id": 5
+    }
+  ],
+  "coursesList":[
+    {
+      "id": 1,
+      "courseName":"Artificial Intelligence",
+      "courseCode":"cst123"
+    },
+    {
+      "id": 2,
+      "courseName":"Cybersecurity",
+      "courseCode":"cst456"
+    },
+    {
+      "id": 3,
+      "courseName":"Data Analytics",
+      "courseCode":"cst789"
+    },
+    {
+      "id": 4,
+      "courseName":"Web Programming",
+      "courseCode":"cst098"
+    }
+  ]
+}

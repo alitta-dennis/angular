@@ -10,16 +10,16 @@ import { Component } from '@angular/core';
               [routerLink]="['/welcome']">Home</a>
         </li>
         <!-- <li class='nav-item'><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
-              [routerLink]="['/products']">Product List</a>
+              [routerLink]="['/courses']">Course List</a>
         </li>
         <li class='nav-item'><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
-              [routerLink]="['/products/0/edit']">Add Product</a>
+              [routerLink]="['/courses/0/edit']">Add Course</a>
         </li> -->
         <li class='nav-item'><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
               [routerLink]="['/login']">Login</a>
         </li>
         <li class='nav-item'><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
-              [routerLink]="['/signUp']">Register</a>
+              [routerLink]="['/signUp']">Sign Up</a>
         </li>
       </ul>
     </nav>
@@ -30,7 +30,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  pageTitle = 'Tech & Mech';
+  pageTitle = 'OnlineCourses';
 }
  
 

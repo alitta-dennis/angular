@@ -6,9 +6,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './home/welcome.component';
-import { ProductModule } from './products/product.module';
+import { CourseModule } from './courses/course.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
+
+import { AuthGuard } from './route.guard';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { SignupPageComponent } from './signup-page/signup-page.component';
     WelcomeComponent,
     LoginPageComponent,
     SignupPageComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { SignupPageComponent } from './signup-page/signup-page.component';
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full'} 
     ]),
-    ProductModule
+    CourseModule
   ],
   bootstrap: [AppComponent]
 })

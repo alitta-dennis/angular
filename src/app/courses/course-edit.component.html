@@ -1,0 +1,139 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+
+  <div class="card-body">
+    <form novalidate
+          (ngSubmit)="saveCourse()"
+          [formGroup]="courseForm">
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="courseNameId">Course Name</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="courseNameId"
+                 type="text"
+                 placeholder="Name (required)"
+                 formControlName="courseName"
+                 [ngClass]="{'is-invalid': displayMessage.courseName }" />
+          <span class="invalid-feedback">
+            {{displayMessage.courseName}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="courseCodeId">Course Code</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="courseCodeId"
+                 type="text"
+                 placeholder="Code (required)"
+                 formControlName="courseCode"
+                 [ngClass]="{'is-invalid': displayMessage.courseCode}" />
+          <span class="invalid-feedback">
+            {{displayMessage.courseCode}}
+          </span>
+        </div>
+      </div>
+
+      
+      <!-- <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="imageUrl">Image URL</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="imageUrl"
+                 type="text"
+                 placeholder="Enter the image Url"
+                 formControlName="imageUrl"
+                 [ngClass]="{'is-invalid': displayMessage.imageUrl}" />
+          <span class="invalid-feedback">
+            {{displayMessage.imageUrl}}
+          </span>
+        </div>
+      </div>
+
+      <div formArrayName="tags">
+        <div class="form-group row mb-2"
+             *ngFor="let tag of tags.controls; let i=index">
+          <label class="col-md-2 col-form-label"
+                 [attr.for]="i">Tag</label>
+
+          <div class="col-md-8">
+            <input class="form-control"
+                   [id]="i"
+                   type="text"
+                   placeholder="Tag"
+                   [formControlName]="i" />
+          </div>
+          <button class="col-md-1 btn btn-outline-warning btn-sm"
+                  type="button"
+                  title="Delete this search tag"
+                  (click)="deleteTag(i)">Delete Tag
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 mb-2">
+          <button class="btn btn-outline-secondary btn-sm"
+                  type="button"
+                  title="Add a search tag"
+                  (click)="addTag()">Add Tag
+          </button>
+        </div>
+      </div>
+      
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="descriptionId">Description</label>
+
+        <div class="col-md-8">
+          <textarea class="form-control"
+                    id="descriptionId"
+                    placeholder="Description"
+                    rows=3
+                    formControlName="description"
+                    [ngClass]="{'is-invalid': displayMessage.description}"></textarea>
+          <span class="invalid-feedback">
+            {{ displayMessage.description}}
+          </span>
+        </div>
+      </div> -->
+
+      <div class="form-group row mb-2">
+        <div class="offset-md-2 col-md-4">
+          <button class="btn btn-primary mr-3"
+                  style="width:80px;"
+                  type="submit"
+                  [title]="courseForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+                  [disabled]="!courseForm.valid">
+            Save
+          </button>
+          <button class="btn btn-outline-secondary mr-3"
+                  style="width:80px;"
+                  type="button"
+                  title="Cancel your edits"
+                  [routerLink]="['/courses']">
+            Cancel
+          </button>
+          <button class="btn btn-outline-warning"
+                  style="width:80px"
+                  type="button"
+                  title="Delete this course"
+                  (click)="deleteCourse()">
+            Delete
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="alert alert-danger"
+       *ngIf="errorMessage">{{errorMessage}}
+  </div>
+</div>
