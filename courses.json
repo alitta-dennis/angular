@@ -24,28 +24,33 @@
       "email": "harry@gmail.com",
       "password": "0987",
       "id": 5
+    },
+    {
+      "email": "namitha@gmail.com",
+      "password": "12345",
+      "id": 6
     }
   ],
-  "coursesList":[
+  "coursesList": [
     {
       "id": 1,
-      "courseName":"Artificial Intelligence",
-      "courseCode":"cst123"
+      "courseName": "Artificial Intelligence(AI)",
+      "courseCode": "cst123"
     },
     {
       "id": 2,
-      "courseName":"Cybersecurity",
-      "courseCode":"cst456"
+      "courseName": "Cybersecurity",
+      "courseCode": "cst456"
     },
     {
       "id": 3,
-      "courseName":"Data Analytics",
-      "courseCode":"cst789"
+      "courseName": "Data Analytics",
+      "courseCode": "cst789"
     },
     {
       "id": 4,
-      "courseName":"Web Programming",
-      "courseCode":"cst098"
+      "courseName": "Web Programming",
+      "courseCode": "cst098"
     }
   ]
 }

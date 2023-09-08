@@ -52,10 +52,11 @@ export class LoginPageComponent implements OnInit{
           });
           if (user) {
             const fname = user.fname;
-            alert(`Welcome, ${fname}`);
-            this.authService.login()
+            alert(`Welcome`);
+            this.authService.login();
+            console.log("logged in");
             this.loginForm.reset();
-            this.router.navigate(["products"]);
+            this.router.navigate(["courses"]);
           } else {
             alert("User not found");
           }
@@ -69,7 +70,7 @@ export class LoginPageComponent implements OnInit{
   logout() {
     // Call the logout method from AuthService
     this.authService.logout();
-    // Redirect to the login page after logout
+    
     this.router.navigate(['/login']);
   }
   

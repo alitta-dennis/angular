@@ -1,26 +1,26 @@
 <div class="card">
   <div class="card-header"
-       *ngIf="courses">
-    {{pageTitle + ": " + courses.courseName}}
+       *ngIf="courseInfo">
+    {{pageTitle + ": " + courseInfo.courseName}}
   </div>
 
   <div class="card-body"
-       *ngIf="courses">
+       *ngIf="courseInfo">
 
     <div class="row">
 
       <div class="col-md-8">
         <div class="row">
           <div class="col-md-3">Id:</div>
-          <div class="col-md-6">{{courses.id}}</div>
+          <div class="col-md-6">{{courseInfo.id}}</div>
         </div>
         <div class="row">
           <div class="col-md-3">Name:</div>
-          <div class="col-md-6">{{courses.courseName}}</div>
+          <div class="col-md-6">{{courseInfo.courseName}}</div>
         </div>
         <div class="row">
           <div class="col-md-3">Code:</div>
-          <div class="col-md-6">{{courses.coursecode}}</div>
+          <div class="col-md-6">{{courseInfo.courseCode}}</div>
         </div>
         <!-- <div class="row">
           <div class="col-md-3">Availability:</div>
@@ -62,7 +62,7 @@
         </button>
         <button class="btn btn-outline-primary"
                 style="width:80px"
-                [routerLink]="['/courses', courses.id, 'edit']">
+                [routerLink]="['/courses', courseInfo.id, 'edit']">
           Edit
         </button>
       </div>

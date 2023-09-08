@@ -21,7 +21,7 @@ import { AuthGuard } from '../route.guard';
     //InMemoryWebApiModule.forRoot(CourseData),
     RouterModule.forChild([
       { path: 'courses', canActivate:[AuthGuard], component: CourseListComponent },
-      { path: 'courses/:id', canActivate:[AuthGuard], component: CourseDetailComponent },
+      { path: 'courses/:id',  component: CourseDetailComponent },
       {
         path: 'courses/:id/edit',
         canDeactivate: [CourseEditGuard],

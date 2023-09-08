@@ -147,7 +147,7 @@ export class CourseEditComponent implements OnInit, AfterViewInit, OnDestroy {
       // Don't delete, it was never saved.
       this.onSaveComplete();
     } else if (this.Course.id) {
-      if (confirm(`Really delete the course: ${this.Course.courseName}?`)) {
+      if (confirm(`Are you sure you want to delete the course, ${this.Course.courseName}?`)) {
         this.courseService.deleteCourse(this.Course.id)
           .subscribe({
             next: () => this.onSaveComplete(),

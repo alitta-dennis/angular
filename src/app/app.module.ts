@@ -9,15 +9,18 @@ import { WelcomeComponent } from './home/welcome.component';
 import { CourseModule } from './courses/course.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
+import { AppNavbarComponent } from './app-navbar.component';
 
 import { AuthGuard } from './route.guard';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     LoginPageComponent,
-    SignupPageComponent
+    SignupPageComponent,
+    AppNavbarComponent
     
   ],
   imports: [
@@ -28,11 +31,13 @@ import { AuthGuard } from './route.guard';
       { path: 'welcome', component: WelcomeComponent },
       { path: 'login', component:LoginPageComponent},
       { path: 'signUp', component:SignupPageComponent},
+      //{ path: 'logout', component: LogoutComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full'} 
     ]),
     CourseModule
   ],
+  providers:[AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

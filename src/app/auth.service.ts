@@ -5,19 +5,21 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
   private isAuthenticated = false;
+  authState = { isAuthenticated: false };
 
   // Simulate user login
   login() {
-    this.isAuthenticated = true;
+    this.authState.isAuthenticated = true;
   }
 
   // Simulate user logout
   logout() {
-    this.isAuthenticated = false;
+    this.authState.isAuthenticated = false;
+   
   }
 
   // Check if the user is authenticated
   isAuthenticatedUser(): boolean {
-    return this.isAuthenticated;
+    return this.authState.isAuthenticated;
   }
 }
