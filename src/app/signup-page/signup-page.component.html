@@ -16,7 +16,7 @@
    </div> -->
 
    <div class="container">
-    <form [formGroup]="signUpForm" (ngSubmit)="signUp()" class="form-box1">
+    <form [formGroup]="signUpForm"  autocomplete="off"   (ngSubmit)="signUp()" class="form-box1">
         <h3>SignUp </h3>
 
         <!-- <div class="form-group">
@@ -38,6 +38,9 @@
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" formControlName="password" class="form-control mb-3 mt-3" placeholder="Enter Password"/>
+            <div style="color:red;font-size: smaller;" *ngIf="signUpForm.get('password')?.hasError('minlength') && signUpForm.get('password')?.touched" class="error-message">
+              Password must be at least 4 characters long.
+            </div>
         </div>
 
         <span>Already have an account? </span>

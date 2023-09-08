@@ -32,8 +32,9 @@
             <th>id</th>
             <th>Course</th>
             <th>Code</th>
-            <!-- <th>Price</th>
-            <th>5 Star Rating</th> -->
+            <th>Start Date</th>
+            <th>Price</th>
+            <th>5 Star Rating</th>
             <th></th>
           </tr>
         </thead>
@@ -53,12 +54,13 @@
             </td>
             <td>{{ course.courseName }}</td>
             <td>{{ course.courseCode }}</td>
-            <!-- <td>{{ product.price | currency:"USD":"symbol":"1.2-2" }}</td>
+            <td>{{ course.startDate }}</td>
+            <td>{{ course.price | currency:"USD":"symbol":"1.2-2" }}</td>
             <td>
-              <pm-star [rating]="product.starRating">
+              <pm-star [rating]="course.starRating">
               </pm-star>
             </td>
-            <td> -->
+            <td>
               <button class="btn btn-outline-primary btn-sm"
                       [routerLink]="['/courses', course.id, 'edit']">
                 Edit

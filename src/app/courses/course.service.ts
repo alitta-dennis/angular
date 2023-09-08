@@ -67,7 +67,7 @@ export class CourseService {
       );
   }
 
-  // ... Other methods (getProduct, createProduct, deleteProduct, updateProduct) remain the same
+  // ... Other methods (getCourse, createCourse, deleteCourse, updateCourse) remain the same
 
   private handleError(err: HttpErrorResponse): Observable<never> {
     let errorMessage = '';
@@ -84,8 +84,11 @@ export class CourseService {
     // Return an initialized object
     return {
       id: 0,
-      courseName: '[]',
-      courseCode: '[]',
+      courseName: '',
+      courseCode: '',
+      startDate:'',
+      price:0,
+      starRating:0,
       
     };
   }

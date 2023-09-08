@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
       <ul class='navbar-nav'>
       <li class='nav-item'><a class='nav-link' routerLinkActive='active' [routerLink]="['/welcome']">Home</a></li>
     <li class='nav-item' *ngIf="!authService.isAuthenticatedUser()"><a class='nav-link' routerLinkActive='active' [routerLink]="['/login']">Login</a></li>
-    <li class='nav-item' *ngIf="!authService.isAuthenticatedUser()"><a class='nav-link' routerLinkActive='active' [routerLink]="['/signUp']">Register</a></li>
+    <li class='nav-item' *ngIf="!authService.isAuthenticatedUser()"><a class='nav-link' routerLinkActive='active' [routerLink]="['/signUp']">Sign Up</a></li>
     <li class='nav-item' *ngIf="authService.isAuthenticatedUser()"><a class='nav-link' routerLinkActive='active' [routerLink]="['/courses']">Courses</a></li>
     <li class='nav-item' *ngIf="authService.isAuthenticatedUser()"><a class='nav-link' routerLinkActive='active' [routerLink]="['/courses/0/edit']">Add Course</a></li>
     <li class='nav-item' *ngIf="authService.isAuthenticatedUser()"><a class='nav-link' (click)="logout()">Logout</a></li>

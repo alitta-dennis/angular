@@ -50,10 +50,10 @@ export class CourseEditComponent implements OnInit, AfterViewInit, OnDestroy {
       },
       courseCode: {
         required: 'Course code is required.'
-      }
-      // starRating: {
-      //   range: 'Rate the product between 1 (lowest) and 5 (highest).'
-      // }
+      },
+      starRating: {
+     range: 'Rate the product between 1 (lowest) and 5 (highest).'
+       }
     };
 
     // Define an instance of the validator for use with this form,
@@ -67,7 +67,9 @@ export class CourseEditComponent implements OnInit, AfterViewInit, OnDestroy {
                          Validators.minLength(3),
                          Validators.maxLength(50)]],
       courseCode: ['', Validators.required],
-      // starRating: ['', NumberValidators.range(1, 5)],
+      startDate: ['', Validators.required],
+      price: ['', Validators.required],
+      starRating: ['', NumberValidators.range(1, 5)],
       // imageUrl: [''],
       // tags: this.fb.array([]),
       // description: ''

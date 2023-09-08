@@ -6,7 +6,7 @@
   <div class="card-body">
     <form novalidate
           (ngSubmit)="saveCourse()"
-          [formGroup]="courseForm">
+          [formGroup]="courseForm" autocomplete="off" >
 
       <div class="form-group row mb-2">
         <label class="col-md-2 col-form-label"
@@ -36,6 +36,54 @@
                  [ngClass]="{'is-invalid': displayMessage.courseCode}" />
           <span class="invalid-feedback">
             {{displayMessage.courseCode}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="startDateId">Start Date</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="startDateId"
+                 type="text"
+                 placeholder="Start Date (required)"
+                 formControlName="startDate"
+                 [ngClass]="{'is-invalid': displayMessage.startDate}" />
+          <span class="invalid-feedback">
+            {{displayMessage.startDate}}
+          </span>
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="priceId">Price</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="priceId"
+                 type="text"
+                 placeholder="Price (Required)"
+                 formControlName="price"
+                 [ngClass]="{'is-invalid': displayMessage.price}" />
+          <span class="invalid-feedback">
+            {{displayMessage.price}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label"
+               for="starRatingId">Star Rating (1-5)</label>
+
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="starRatingId"
+                 type="text"
+                 placeholder="Rating (1-5)"
+                 formControlName="starRating"
+                 [ngClass]="{'is-invalid': displayMessage.starRating}" />
+          <span class="invalid-feedback">
+            {{displayMessage.starRating}}
           </span>
         </div>
       </div>

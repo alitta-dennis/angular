@@ -13,7 +13,7 @@ export class CourseDetailComponent implements OnInit {
   errorMessage = '';
   
   courseInfo:course | undefined;
-  courses:course[]=[];
+  //courses:course[]=[];
 
   constructor(private route: ActivatedRoute,
               private router: Router,

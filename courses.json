@@ -35,22 +35,34 @@
     {
       "id": 1,
       "courseName": "Artificial Intelligence(AI)",
-      "courseCode": "cst123"
+      "courseCode": "cst123",
+      "starRating": 3.5,
+      "price": 10.5,
+      "startDate": "Sept 15,2023"
     },
     {
       "id": 2,
       "courseName": "Cybersecurity",
-      "courseCode": "cst456"
+      "courseCode": "cst456",
+      "starRating": 4.3,
+      "price": 12,
+      "startDate": "October 3,2023"
     },
     {
       "id": 3,
       "courseName": "Data Analytics",
-      "courseCode": "cst789"
+      "courseCode": "cst789",
+      "starRating": 3.7,
+      "price": 8,
+      "startDate": "September 25,2023"
     },
     {
       "id": 4,
       "courseName": "Web Programming",
-      "courseCode": "cst098"
+      "courseCode": "cst098",
+      "starRating": 3.6,
+      "price": 8.5,
+      "startDate": "Ocyober 10,2023"
     }
   ]
 }

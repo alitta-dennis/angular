@@ -22,22 +22,22 @@
           <div class="col-md-3">Code:</div>
           <div class="col-md-6">{{courseInfo.courseCode}}</div>
         </div>
-        <!-- <div class="row">
-          <div class="col-md-3">Availability:</div>
-          <div class="col-md-6">{{product.releaseDate}}</div>
+        <div class="row">
+          <div class="col-md-3">Start Date:</div>
+          <div class="col-md-6">{{courseInfo.startDate}}</div>
         </div>
         <div class="row">
           <div class="col-md-3">Price:</div>
-          <div class="col-md-6">{{product.price|currency:"USD":"symbol"}}</div>
+          <div class="col-md-6">{{courseInfo.price|currency:"USD":"symbol"}}</div>
         </div>
         <div class="row">
           <div class="col-md-3">5 Star Rating:</div>
           <div class="col-md-6">
-            <pm-star [rating]="product.starRating">
+            <pm-star [rating]="courseInfo.starRating">
             </pm-star>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-3">Tags:</div>
           <div class="col-md-6">{{product.tags}}</div>
         </div>
